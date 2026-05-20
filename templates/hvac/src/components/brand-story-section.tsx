@@ -3,7 +3,7 @@
 import { config } from "@/lib/config"
 
 export default function BrandStorySection() {
-  const chapters = config.brandStoryChapters
+  const chapters = config.brandStoryChapters ?? []
 
   return (
     <section aria-label="Brand story" className="relative">
