@@ -1,110 +1,62 @@
-import type { SiteConfig, BrandStoryChapter } from "@core/web/types"
+import type { SiteConfig } from "@core/web/types"
 
-export const config: SiteConfig & { brandStoryChapters: BrandStoryChapter[] } = {
+export const config: SiteConfig = {
   business: {
-    name: "ProFix HVAC & Plumbing",
-    tagline: "Fast. Licensed. Trusted.",
-    phone: "(555) 123-4567",
-    phoneHref: "tel:+15551234567",
-    email: "hello@profixhvac.com",
-    address: "Tracy, California",
-    city: "Tracy",
-    serviceAreas: ["Tracy", "Stockton", "Modesto", "Manteca", "Lathrop", "Lodi"],
-    license: "CSLB #987654",
-    since: "2008",
+    name: "Clarke & Rush",
+    tagline: "Your Comfort, Our Priority",
+    phone: "(916) 609-2665",
+    phoneHref: "tel:+19166092665",
+    email: "info@clarkeandrush.com",
+    address: "2330 Glendale Ln, Sacramento, CA 95825",
+    city: "Sacramento",
+    serviceAreas: ["Sacramento", "Elk Grove", "Roseville", "Folsom", "Citrus Heights", "Rancho Cordova"],
+    license: "608005",
+    since: "1963",
     google_rating: "4.9",
-    review_count: "312",
+    review_count: "200",
     emergency: true,
-    social: {
-      google: "https://google.com",
-      yelp: "https://yelp.com",
-      facebook: "https://facebook.com",
-    },
-    theme: "navy",
+    theme: "ocean",
     niche: "hvac",
   },
 
   services: [
-    { icon: "thermometer",  title: "AC Repair & Install",  desc: "Same-day diagnostics and repair for all AC brands. New system installations with 10-year warranty.", urgent: false },
-    { icon: "flame",        title: "Heating & Furnace",    desc: "Furnace repair, replacement, and maintenance. No heat tonight? We have emergency slots available.", urgent: false },
-    { icon: "droplets",     title: "Plumbing Repairs",     desc: "Leaks, clogs, burst pipes, water heaters. Full-service plumbing for residential and commercial.", urgent: false },
-    { icon: "zap",          title: "Emergency Service",    desc: "24/7 emergency dispatch. We answer every call. Average response time: 45 minutes.", urgent: true },
-    { icon: "shield-check", title: "Maintenance Plans",    desc: "Annual tune-ups that extend equipment life by 5+ years and cut energy bills by up to 20%.", urgent: false },
-    { icon: "wrench",       title: "Commercial HVAC",      desc: "Full commercial HVAC services. Restaurants, offices, retail. Scheduled and emergency.", urgent: false },
+    { icon: "thermometer", title: "AC Repair & Installation", desc: "Expert service for all air conditioning needs, from quick repairs to new system installations.", urgent: true },
+    { icon: "flame", title: "Furnace Repair & Installation", desc: "Reliable heating solutions, including furnace repair, replacement, and new system setups.", urgent: true },
+    { icon: "droplets", title: "Plumbing Services", desc: "Comprehensive plumbing solutions for your home, from leak detection to water heater services.", urgent: true },
+    { icon: "shield-check", title: "Indoor Air Quality", desc: "Improve your home's air with our advanced filtration and purification systems.", urgent: false },
+    { icon: "home", title: "Window & Insulation", desc: "Enhance energy efficiency with professional window replacement and insulation services.", urgent: false },
+    { icon: "briefcase", title: "Commercial HVAC & Plumbing", desc: "Specialized HVAC and plumbing services tailored for commercial properties and businesses.", urgent: true }
   ],
 
   testimonials: [
-    { name: "Maria S.", location: "Tracy, CA",    stars: 5, text: "AC went out on a 104° day. ProFix arrived in under an hour, had parts on the truck, done by noon. Saved us." },
-    { name: "James T.", location: "Stockton, CA", stars: 5, text: "Called at 11pm for a burst pipe. Technician showed up in 40 minutes. Professional, clean, fair price. 5 stars." },
-    { name: "Linda K.", location: "Manteca, CA",  stars: 5, text: "Used them for annual furnace tune-up. Saved $340 vs competitor quote. Will use every year going forward." },
+    { name: "Sarah J.", location: "Sacramento, CA", stars: 5, text: "Clarke & Rush saved our summer! Our AC went out on the hottest day, and their technician was here within hours. He was professional, explained everything clearly, and had us cool again in no time. The price was fair, and the service was exceptional. Highly recommend!" },
+    { name: "Mark T.", location: "Elk Grove, CA", stars: 5, text: "We had a persistent leak under our sink that other plumbers couldn't fix. Clarke & Rush sent out a fantastic plumber who diagnosed the issue quickly and repaired it on the spot. He was courteous and left the area spotless. So glad we called them for our plumbing needs." },
+    { name: "Jessica L.", location: "Roseville, CA", stars: 5, text: "Our old furnace was on its last leg, and we needed a replacement fast. Clarke & Rush provided a detailed quote, offered financing options, and installed a new, efficient furnace within a week. The installation team was efficient and very respectful of our home. We're warm and happy!" }
   ],
 
   trustBadges: [
-    "Licensed & Insured",
-    "NATE Certified",
-    "BBB A+ Rated",
-    "24/7 Emergency",
-    "Free Estimates",
-    "100% Satisfaction Guarantee",
+    "NATE Certified Technicians", "GAF Master Elite Contractor", "Over 60 Years Experience", "0% Financing Available", "Sacramento Favorites Award", "24/7 Emergency Service"
   ],
 
   stats: [
-    { value: 4.9,   label: "Google Rating",  suffix: "★", decimals: 1 },
-    { value: 4800,  label: "Jobs Done",      suffix: "+", decimals: 0 },
-    { value: 16,    label: "Yrs Experience", suffix: "+", decimals: 0 },
+    { value: 4.9, label: "Google Rating", suffix: "★", decimals: 1 },
+    { value: 60, label: "Years in Business", suffix: "+", decimals: 0 },
+    { value: 10000, label: "Happy Customers", suffix: "+", decimals: 0 }
   ],
 
   reasons: [
-    { icon: "clock",        title: "Same-Day Service",       desc: "Call before noon and we're there today. 45-minute average emergency response." },
-    { icon: "dollar-sign",  title: "Upfront Pricing",        desc: "No surprises. We quote before we work, and we stick to it. Always." },
-    { icon: "award",        title: "NATE Certified Techs",   desc: "Our technicians hold the highest HVAC certification available. Real expertise on every job." },
-    { icon: "thumbs-up",    title: "Satisfaction Guarantee", desc: "If you're not 100% satisfied, we come back and make it right. No questions." },
-    { icon: "phone",        title: "Real Humans Answer",     desc: "No phone trees. A real dispatcher picks up — day, night, weekends, holidays." },
-    { icon: "truck",        title: "Stocked Service Trucks", desc: "90% of repairs done on the first visit. We carry the parts so you're not waiting." },
+    { icon: "clock", title: "Fast Response", desc: "We prioritize your comfort with prompt service and quick solutions to your HVAC and plumbing emergencies." },
+    { icon: "dollar-sign", title: "Upfront Pricing", desc: "No surprises here. We provide clear, honest pricing before any work begins, so you know what to expect." },
+    { icon: "award", title: "Certified Pros", desc: "Our technicians are highly trained, certified, and continuously educated on the latest industry standards." },
+    { icon: "thumbs-up", title: "Satisfaction Guarantee", desc: "Your peace of mind is our goal. We stand behind our work with a commitment to your complete satisfaction." },
+    { icon: "phone", title: "Real Humans Answer", desc: "Speak to a helpful team member, not a machine, whenever you call – day or night." },
+    { icon: "truck", title: "Fully Equipped", desc: "Our service vehicles are stocked with essential parts and tools to complete most jobs on the first visit." }
   ],
 
-  formServiceOptions: [
-    "AC Repair or Installation",
-    "Heating / Furnace",
-    "Plumbing",
-    "Emergency Service",
-    "Maintenance Plan",
-  ],
-
-  brandStoryChapters: [
-    {
-      index: "01",
-      label: "Who We Are",
-      heading: "Honest Work. Every Time.",
-      body: "Since 2008, ProFix HVAC & Plumbing has been the call neighbors make when something breaks. No upsells. No scare tactics. Just licensed technicians who show up and fix it right.",
-      bg: "var(--brand-accent)",
-      fg: "#fff",
-    },
-    {
-      index: "02",
-      label: "How It Works",
-      heading: "Call. Fix. Done.",
-      body: "Three steps. No waiting. No guessing. Your home is comfortable again — today.",
-      bg: "var(--brand-bg)",
-      fg: "#fff",
-      items: [
-        { n: "01", title: "Call or Text",  desc: "Reach a real dispatcher in under 60 seconds. No phone trees, no hold music." },
-        { n: "02", title: "We Diagnose",   desc: "A certified tech arrives with a fully stocked truck. Upfront quote before any work starts." },
-        { n: "03", title: "Fixed Today",   desc: "90% of jobs resolved on the first visit. You pay only what was quoted." },
-      ],
-    },
-    {
-      index: "03",
-      label: "Why Choose Us",
-      heading: "Built On Trust.",
-      body: "NATE Certified technicians. CSLB Licensed. Fully insured. The credentials to back up every promise.",
-      bg: "#F5F0E8",
-      fg: "var(--brand-bg)",
-    },
-  ],
+  formServiceOptions: ["AC Repair & Installation", "Furnace Repair & Installation", "Plumbing Services", "Indoor Air Quality", "Window & Insulation", "Commercial HVAC & Plumbing"]
 }
 
-// Re-exports for backward compat
+// Backward-compat re-exports
 export const BUSINESS = config.business
 export const SERVICES = config.services!
 export const TESTIMONIALS = config.testimonials!
